@@ -29,4 +29,4 @@ Apache下的一个子项目 。特点：高吞吐，在一台普通的服务器�
 官方网站下载：http://activemq.apache.org/   
 启动： ./activemq start（admin/admin）
 ## 入门demo
-[demo调转](./jmsDemo/src/main/java/*)
+[demo调转](./jmsDemo/src/main/java/)
