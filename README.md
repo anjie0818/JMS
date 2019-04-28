@@ -20,11 +20,12 @@ Apache下的一个子项目 。特点：高吞吐，在一台普通的服务器�
 · BytesMessage--一个字节的数据流   
 · StreamMessage -- Java 原始值的数据流   
 ### JMS消息传递类型
+* ![](./images/ptp.png)
 * 点对点，生产者消费者一对一
-![](./images/ptp.png)
     * 点对点的模式主要建立在一个队列上面，当连接一个列队的时候，发送端不需要知道接收端是否正在接收，可以直接向ActiveMQ发送消息，发送的消息，将会先进入队列中，如果有接收端在监听，则会发向接收端，如果没有接收端接收，则会保存在activemq服务器，直到接收端接收消息，点对点的消息模式可以有多个发送端，多个接收端，但是一条消息，只会被一个接收端给接收到，哪个接收端先连上ActiveMQ，则会先接收到，而后来的接收端则接收不到那条消息。
+* ![](./images/pts.png)
 * 发布订阅，一个生产者发布消息，多个消费者接受
-![](./images/pts.png)
+
 ### ActiveMQ下载安装
 官方网站下载：http://activemq.apache.org/   
 启动： ./activemq start（admin/admin）
