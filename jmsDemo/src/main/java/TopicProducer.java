@@ -22,7 +22,7 @@ public class TopicProducer {
         //6.创建消息生产者
         MessageProducer producer = session.createProducer(topic);
         //7.创建消息
-        TextMessage textMessage = session.createTextMessage("欢迎来到神奇的品优购世界");
+        TextMessage textMessage = session.createTextMessage("欢迎来到神奇的世界");
         //8.发送消息
         producer.send(textMessage);
         //9.关闭资源

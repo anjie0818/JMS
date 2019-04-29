@@ -12,7 +12,7 @@ import java.io.IOException;
 public class QueueConsumer {
     public static void main(String[] args) throws JMSException, IOException {
         //1.创建连接工厂
-        ConnectionFactory factory=new ActiveMQConnectionFactory("tcp:4.98.132.196:61616");
+        ConnectionFactory factory=new ActiveMQConnectionFactory("tcp://47.98.132.196:61616");
         //2.获取连接
         Connection connection = factory.createConnection();
         //3.启动连接
@@ -20,7 +20,7 @@ public class QueueConsumer {
         //4.获取session（参数1：是否启动事务；参数2：消息确认模式）
         Session session=connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
         //5.创建队列队形
-        Queue queue=session.createQueue("test-queue");
+        Queue queue=session.createQueue("test_queue");
         //6.创建消息消费者
         MessageConsumer consumer=session.createConsumer(queue);
         //7.监听消息

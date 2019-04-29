@@ -10,7 +10,7 @@ import javax.jms.*;
 public class QueueProducer {
     public static void main(String[] args) throws JMSException {
         //1.创建连接池工厂
-        ConnectionFactory connectionFactory=new ActiveMQConnectionFactory("tcp:4.98.132.196:61616");
+        ConnectionFactory connectionFactory=new ActiveMQConnectionFactory("tcp://47.98.132.196:61616");
         //2.获取连接
         Connection connection = connectionFactory.createConnection();
         //3.启动连接
