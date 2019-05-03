@@ -29,8 +29,12 @@ public class QueueProducer {
         MessageProducer producer = session.createProducer(queue);
         //7.创建消息
         TextMessage textMessage=session.createTextMessage("test_queue....jmsdemo");
+        TextMessage textMessage2=session.createTextMessage("test_queue2....jmsdemo");
+
         //8.发送消息
         producer.send(textMessage);
+        producer.send(textMessage2);
+
         //9.关闭资源
         producer.close();
         session.close();
